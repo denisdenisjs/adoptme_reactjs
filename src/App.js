@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./CardsHomePage/CardsHomePage";
+import NavbarWrapper from "./Navbar-Wrapper/WrapperNav";
+import MenuMain from "./Navbar-Wrapper/MenuMain";
+import RealFootwrapperSubscribe from "./RealFootwrapper/RealFootwrapperSubscribe";
+import UnderRegisterSocial from "./RealFootwrapper/UnderRegisterSocials/UnderRegisterSocials";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="body-container">
+      <NavbarWrapper />
+      <HomePage />
+      <RealFootwrapperSubscribe />
+      <BrowserRouter>
+        <Routes>
+          {/* <Route index element={<Adoptation />} />
+        <Route path="/categories" element={<Categories />} /> */}
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
